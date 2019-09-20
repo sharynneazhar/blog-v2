@@ -1,0 +1,11 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Sharynne Azhar"
+theme = "hello-friend"
+paginate = 3
+
+[languages]
+  [languages.en]
+    [languages.en.params.logo]
+      logoText = "brb, getting coffee..."
+      logoHomeLink = "/"
