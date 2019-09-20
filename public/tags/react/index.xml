@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>react on Sharynne Azhar</title>
+    <link>/tags/react/</link>
+    <description>Recent content in react on Sharynne Azhar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Nov 2017 12:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>React ND - Redux, Pt. 4</title>
+      <link>/posts/react-nd-day-8/</link>
+      <pubDate>Mon, 27 Nov 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/react-nd-day-8/</guid>
+      <description>Day #8  Worked from 1:30pm - 2:30pm Made it through Lesson 5  Lesson 5: Redux Middleware When I was learning React-Redux, one concept that I could never wrap my head around was the concept of a middleware. What is a middleware?
+Middleware is code that intercepts a request or a process, usually redirecting it or producing some sort of side effect. In Redux, middleware lives in between the dispatching of action and the reducers.</description>
+    </item>
+    
+    <item>
+      <title>React ND - Redux, Pt. 3</title>
+      <link>/posts/react-nd-day-7/</link>
+      <pubDate>Thu, 23 Nov 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/react-nd-day-7/</guid>
+      <description>Day #7  Worked from 11pm - 1am Made it through Lesson 4  Lesson 3: React &amp;amp; Redux The creators of Redux wrote a really helpful package react-redux that provides us with a better abstraction for Redux. With the connect() method from react-redux, we won&amp;rsquo;t have to keep passing the store down a bunch of nested components (this is called prop threading); instead, connect() allows use to specify which components should receive which data from the store.</description>
+    </item>
+    
+    <item>
+      <title>React ND - Redux, Pt. 2</title>
+      <link>/posts/react-nd-day-6/</link>
+      <pubDate>Tue, 21 Nov 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/react-nd-day-6/</guid>
+      <description>Day #6  Worked from 10:15am - 1:10pm Made it through Lesson 2  Lesson 2: Redux At Its Core The concept of Redux, as we learned last time, was pretty simple to understand. However, learning how to implement Redux may be a little bit trickier. There are three major players in Redux:
+ Actions Reducers The Store  Learning Redux is difficult because in order to be able to implement anything, you really need to understand how these three components work together.</description>
+    </item>
+    
+    <item>
+      <title>React ND - Redux, Pt. 1</title>
+      <link>/posts/react-nd-day-5/</link>
+      <pubDate>Mon, 20 Nov 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/react-nd-day-5/</guid>
+      <description>Day #5?  Worked from 8:30pm - 9:50pm Made it through Lesson 1  It&amp;rsquo;s been awhile, fam. Since school started, I haven&amp;rsquo;t had very much time to work on these lessons. Though, it&amp;rsquo;s Thanksgiving break this week and I plan on grinding. Hopefully, I can finish the two projects left in this Nanodegree by this weekend!
+Let&amp;rsquo;s get cracking.
+Lesson 1: Why Redux? Motivation for Redux If you think about bugs you&amp;rsquo;ve had come across while developing an app, the cause of those bugs probably came from some state or data mismanagement.</description>
+    </item>
+    
+    <item>
+      <title>React ND - MyReads</title>
+      <link>/posts/react-nd-myreads/</link>
+      <pubDate>Sat, 12 Aug 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/react-nd-myreads/</guid>
+      <description>Day #4  Worked from 1:15am - 4am Completed Project #1  MyReads - Book Tracking App Quick recap before I get to the project: I finished up lesson 5 on React Router yesterday night. I learned about single-page applications (I always hear this term get thrown around but never actually understood the concept until now) and how React Router comes into play in terms of dynamically rendering content.</description>
+    </item>
+    
+    <item>
+      <title>React ND - Day #3</title>
+      <link>/posts/react-nd-day-3/</link>
+      <pubDate>Sat, 05 Aug 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/react-nd-day-3/</guid>
+      <description>Day #3  Worked from 3:43am - 4am Made it through Lesson 4  Lesson 4: Rendering UI with External Data Nothing special in this lesson. It took about 40 minutes to complete. It introduced React&amp;rsquo;s Lifecycle Events.
+Lifecycle Events These are special methods each React component has that allows us to tap into different points in its life to manipulate state. We can breakdown these methods into three different points: 1.</description>
+    </item>
+    
+    <item>
+      <title>React ND - Day #2</title>
+      <link>/posts/react-nd-day-2/</link>
+      <pubDate>Fri, 04 Aug 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/react-nd-day-2/</guid>
+      <description>Day #2  Worked from 10:45pm to 12:15am Made it through Part 1: Lesson 3  Lesson 3: State Management In this lesson, I learned more about state management in React. There are three main parts of state management:
+ With props With function components With controlled components  Section 3.1: Passing Data with Props Remember that React is a Javascript library and it is nothing but a series of composed functions.</description>
+    </item>
+    
+    <item>
+      <title>React ND - Day #1</title>
+      <link>/posts/react-nd-day-1/</link>
+      <pubDate>Wed, 02 Aug 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/react-nd-day-1/</guid>
+      <description>Last week, I mentioned enrolling in Udacity’s React Nanodegree program. I’m already pretty familiar with React, but I feel like I have a lack of foundation when it comes to the building principles of React. So, I was pretty excited when I found out about Udacity’s new React Nanodegree. Here’s to unlearning bad habits! 🍻
+Day #1  Worked from 6:15 to 7:15pm Made it through Part 1: Lesson 1 &amp;amp; 2  Lesson 1 First thing I learned was function composition - the idea of combining simple functions to build more complicated ones.</description>
+    </item>
+    
+    <item>
+      <title>Hacking the Google Places Autocomplete API</title>
+      <link>/posts/google-places-api/</link>
+      <pubDate>Tue, 01 Aug 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/google-places-api/</guid>
+      <description>For the past couple of weeks, I&amp;rsquo;ve been working on implementing a location search box using Google Places API. It would be used to apply a location filter on a list of user profiles. To do so, I needed to use the Autocomplete API which provides a nice type-ahead-search behavior you&amp;rsquo;ve seen in many of Google&amp;rsquo;s search boxes. Once I got my API key, it was a really simple setup. Note: I&amp;rsquo;m working with React.</description>
+    </item>
+    
+    <item>
+      <title>React Riot 2017</title>
+      <link>/posts/react-riot-2017/</link>
+      <pubDate>Wed, 28 Jun 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/react-riot-2017/</guid>
+      <description>I had so much fun with the previous hackathon that I wanted to try another. I searched online and found React Riot. It&amp;rsquo;s a 48-hour online React hackathon held over this past weekend. It was the worst weekend I could&amp;rsquo;ve possibly chosen to participate in a hackathon. I had a work deadline to meet. I had a talent show to emcee. I had a summer camp to prepare. I had many things going on.</description>
+    </item>
+    
+  </channel>
+</rss>

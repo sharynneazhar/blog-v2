@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>internship on Sharynne Azhar</title>
+    <link>/tags/internship/</link>
+    <description>Recent content in internship on Sharynne Azhar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Jul 2017 12:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/internship/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cerner Internship 2017: Wrap-Up</title>
+      <link>/posts/cerner-internship/</link>
+      <pubDate>Wed, 26 Jul 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/cerner-internship/</guid>
+      <description>Oh my goodness. It is officially my last week as a Cerner intern. *sad face*
+When I began the internship, I had a pretty good idea of what to expect, especially since half of my friends work for Cerner. The internship is going to start off slow with orientation and a few tours. Then, I&amp;rsquo;ll be thrown right into a project and I&amp;rsquo;ll learn how to be big girl developer. Pretty chill.</description>
+    </item>
+    
+    <item>
+      <title>My First Hackathon</title>
+      <link>/posts/cerner-intern-hackfest/</link>
+      <pubDate>Mon, 26 Jun 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/cerner-intern-hackfest/</guid>
+      <description>Two weeks ago, I had decided to join a hackathon sponsored by the company I&amp;rsquo;m interning at this summer, Cerner. It was a hackathon for interns and apprentices, and this will be the my first hackathon ever. It was a whole week long so it won&amp;rsquo;t interfere with our actual work. At least, that was the intention. 😝
+Our team chose to work on a healthcare analytics app. It was an idea pitched by one of my teammates and we all liked the idea, especially since Cerner deals with healthcare IT and we can receive bonus points for using any of their open-sourced libraries.</description>
+    </item>
+    
+  </channel>
+</rss>

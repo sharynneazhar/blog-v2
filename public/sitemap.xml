@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2017-11-27T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/react/</loc>
+    <lastmod>2017-11-27T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/react-nd-day-8/</loc>
+    <lastmod>2017-11-27T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2017-11-27T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2017-11-27T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/react-nd-day-7/</loc>
+    <lastmod>2017-11-23T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/react-nd-day-6/</loc>
+    <lastmod>2017-11-21T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/react-nd-day-5/</loc>
+    <lastmod>2017-11-20T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/react-nd-myreads/</loc>
+    <lastmod>2017-08-12T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/react-nd-day-3/</loc>
+    <lastmod>2017-08-05T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/react-nd-day-2/</loc>
+    <lastmod>2017-08-04T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/react-nd-day-1/</loc>
+    <lastmod>2017-08-02T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/google-api/</loc>
+    <lastmod>2017-08-01T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/google-places-api/</loc>
+    <lastmod>2017-08-01T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/cerner-internship/</loc>
+    <lastmod>2017-07-26T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/internship/</loc>
+    <lastmod>2017-07-26T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/udacity-discovery-week/</loc>
+    <lastmod>2017-07-23T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/udacity/</loc>
+    <lastmod>2017-07-23T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/javascript/</loc>
+    <lastmod>2017-07-19T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/one-liners/</loc>
+    <lastmod>2017-07-19T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/hackathon/</loc>
+    <lastmod>2017-06-28T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/react-riot-2017/</loc>
+    <lastmod>2017-06-28T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/cerner-intern-hackfest/</loc>
+    <lastmod>2017-06-26T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/pretty-json/</loc>
+    <lastmod>2017-04-26T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/css/</loc>
+    <lastmod>2017-04-19T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/css-responsive-tables/</loc>
+    <lastmod>2017-04-19T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/command-line-sass/</loc>
+    <lastmod>2017-03-23T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/sass/</loc>
+    <lastmod>2017-03-23T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/personal-projects/</loc>
+    <lastmod>2017-03-01T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/ruby-on-rails/</loc>
+    <lastmod>2017-03-01T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/top-setup-4/</loc>
+    <lastmod>2017-03-01T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/cpp/</loc>
+    <lastmod>2017-02-26T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/multithreading/</loc>
+    <lastmod>2017-02-26T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/train-simulation-2/</loc>
+    <lastmod>2017-02-26T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/train-simulation/</loc>
+    <lastmod>2017-02-23T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/top-setup-3/</loc>
+    <lastmod>2017-02-17T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/top-setup-2/</loc>
+    <lastmod>2017-02-09T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/top-setup/</loc>
+    <lastmod>2017-02-07T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+  </url>
+  
+</urlset>

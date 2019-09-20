@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>React ND - Redux, Pt. 3 :: Sharynne Azhar</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Day #7  Worked from 11pm - 1am Made it through Lesson 4  Lesson 3: React &amp;amp; Redux The creators of Redux wrote a really helpful package react-redux that provides us with a better abstraction for Redux. With the connect() method from react-redux, we won&amp;rsquo;t have to keep passing the store down a bunch of nested components (this is called prop threading); instead, connect() allows use to specify which components should receive which data from the store."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/react-nd-day-7/" />
+
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="React ND - Redux, Pt. 3"/>
+<meta name="twitter:description" content="Day #7  Worked from 11pm - 1am Made it through Lesson 4  Lesson 3: React &amp; Redux The creators of Redux wrote a really helpful package react-redux that provides us with a better abstraction for Redux. With the connect() method from react-redux, we won&rsquo;t have to keep passing the store down a bunch of nested components (this is called prop threading); instead, connect() allows use to specify which components should receive which data from the store."/>
+
+
+
+<meta property="og:title" content="React ND - Redux, Pt. 3" />
+<meta property="og:description" content="Day #7  Worked from 11pm - 1am Made it through Lesson 4  Lesson 3: React &amp; Redux The creators of Redux wrote a really helpful package react-redux that provides us with a better abstraction for Redux. With the connect() method from react-redux, we won&rsquo;t have to keep passing the store down a bunch of nested components (this is called prop threading); instead, connect() allows use to specify which components should receive which data from the store." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/react-nd-day-7/" />
+<meta property="article:published_time" content="2017-11-23T12:00:00+00:00" />
+<meta property="article:modified_time" content="2017-11-23T12:00:00+00:00" />
+
+
+
+<link rel="icon" type="image/png" href="/favicon.png">
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">brb, getting coffee...</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  <div class="post">
+    <h2 class="post-title"><a href="/posts/react-nd-day-7/">React ND - Redux, Pt. 3</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2017-11-23
+        </span>
+      
+      
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="/tags/react/">react</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      
+
+<h2 id="day-7">Day #7</h2>
+
+<ul>
+<li>Worked from 11pm - 1am</li>
+<li>Made it through Lesson 4</li>
+</ul>
+
+<h3 id="lesson-3-react-redux">Lesson 3: React &amp; Redux</h3>
+
+<p>The creators of Redux wrote a really helpful package <code>react-redux</code> that provides us with a better abstraction for Redux. With the <code>connect()</code> method from <code>react-redux</code>, we won&rsquo;t have to keep passing the store down a bunch of nested components (this is called <em>prop threading</em>); instead, <code>connect()</code> allows use to specify which components should receive which data from the store.</p>
+
+<h4 id="currying">Currying</h4>
+
+<p><strong>Currying</strong> occurs when you call a function without all of its arguments and it returns a function that&rsquo;s waiting for the next argument. For example, suppose we have a simple <code>plate()</code> function that takes in two arguments: a <code>vegetable</code> and a <code>fruit</code>.</p>
+
+<pre><code class="language-js">function plate(vegetables, fruit) {
+  return `I ate a plate of ${vegetables} and ${fruit}!`;
+}
+
+plate('corn', 'apples');
+</code></pre>
+
+<p>Now say that for whatever reason we want to delay getting the fruit until a later point. One way we could achieve this would be to return a function which accepts the fruit that can be invoked at a later point.</p>
+
+<pre><code class="language-js">function plate(vegetables) {
+  return function fruitFunc (fruit) {
+    return `I ate a plate of ${vegetables} and ${fruit}!`;
+  }
+}
+
+const fruitFunc = plate('corn');
+</code></pre>
+
+<p>Now we have a <code>fruitFunc()</code> that we can call, pass it a <code>fruit</code>, and the <code>vegetables</code> (i.e. corn) are still accessible via closures.</p>
+
+<p>Another way to write this would be like this:</p>
+
+<pre><code class="language-js">function plate(vegetables) {
+  return function fruitFunc (fruit) {
+    return `I ate a plate of ${vegetables} and ${fruit}!`;
+  }
+}
+
+const sentence = plate('corn')('apples');
+</code></pre>
+
+<p>This technique - currying - is used a lot in functional programming and in Redux.</p>
+
+<h4 id="the-connect-method">The Connect Method</h4>
+
+<p><code>connect()</code> is a function that makes it possible for a component to get both state and dispatch from the Redux store. Fully used, it looks like this:</p>
+
+<pre><code class="language-js">connect(mapStateToProps, mapDispatchToProps)(MyComponent)
+</code></pre>
+
+<p>This is a classic example of currying in Redux! <code>MyComponent</code> is the component you want to receive store state, dispatch, or both. <code>mapStateToProps()</code> is a function that receives the current store, current props, and what it returns will be available to <code>MyComponent</code> as props. <code>mapDispatchToProps()</code> allows you wrap action creators inside of dispatch.</p>
+
+<h5 id="mapstatetoprops">mapStateToProps()</h5>
+
+<p><code>mapStateToProps()</code> allows you to specify which data from the store you want passed to a React component. The properties of the object returned from <code>mapStateToProps()</code> will be passed to the component as props. For example,</p>
+
+<pre><code class="language-js">import { connect } from 'react-redux';
+
+const User = ({ name, age }) =&gt; {
+  // ...
+};
+
+const mapStateToProps = (state, props) =&gt; ({
+  name: state.user.name,
+  age: state.user.age
+});
+
+export default connect(mapStateToProps)(User);
+</code></pre>
+
+<p>In the above example, both <code>name</code> and <code>age</code> will be available as props for the <code>User</code> component to access.</p>
+
+<h5 id="mapdispatchtoprops">mapDispatchToProps()</h5>
+
+<p><code>mapDispatchToProps()</code> is similar to how <code>mapStateToProps()</code> works. Instead of binding state, it binds the <code>dispatch()</code> method from Redux to our action creators before they hit a component.</p>
+
+<pre><code class="language-js">import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { updateName } from './actions';
+
+class User extends Component {
+  state = { name: '' }
+  handleUpdateUser = () =&gt; {
+    this.props.boundUpdateName(this.state.name)
+  }
+  render () {
+    // ...
+  }
+}
+
+const mapDispatchToProps = dispatch =&gt; ({
+  boundUpdateName: (name) =&gt; dispatch(updateName(name))
+});
+
+export default connect(null, mapDispatchToProps)(User);
+</code></pre>
+
+<h4 id="building-an-effective-redux-store">Building an Effective Redux Store</h4>
+
+<p>When architecting a Redux store, there are two things we should keep in mind:</p>
+
+<ol>
+<li><strong>Do not duplicate data</strong>. If data lives in multiple places, you have no single source of truth, and you waste resources trying to keep the data in sync with each other.</li>
+<li><strong>Keep your store as shallow as possible</strong>. Nested data makes reducer logic more complicated (trying to update deeply nested data can get slow and complex quickly).</li>
+</ol>
+
+<p><strong>Normalization</strong> is the process of removing duplicate pieces of data and making sure that the data is as shallow as possible. Not only does this allow applications to maintain the “single source of truth” in the store’s state &ndash; reducer logic that updates that state is also kept clean and reasonable. Ultimately, normalizing your Redux store will lead to more efficient and consistent queries.</p>
+
+<p>How do we normalize our data? We can create <em>references</em>. Keep every entity in an object stored with an ID as a key, and use IDs to reference it from other entities, or lists.</p>
+
+<p>The basic concepts of normalizing data are:</p>
+
+<ul>
+<li>Each type of data gets its own &ldquo;table&rdquo; in the state.</li>
+<li>Each &ldquo;data table&rdquo; should store the individual items in an object, with the IDs of the items as keys and the items themselves as the values.</li>
+<li>Any references to individual items should be done by storing the item&rsquo;s ID.</li>
+<li>Arrays of IDs should be used to indicate ordering.</li>
+</ul>
+
+<p>Learn more about normalization <a href="http://redux.js.org/docs/recipes/reducers/NormalizingStateShape.html">here</a> from the Redux docs.</p>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="/posts/react-nd-day-8/">
+                <span class="button__icon">←</span>
+                <span class="button__text">React ND - Redux, Pt. 4</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="/posts/react-nd-day-6/">
+                <span class="button__text">React ND - Redux, Pt. 2</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">brb, getting coffee...</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span>
+        <span>Theme created by <a href="https://twitter.com/panr" target="_blank" rel="noopener">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+  </body>
+</html>

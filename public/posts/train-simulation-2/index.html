@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>Train Simulation, Pt. 2 :: Sharynne Azhar</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="The first project in my parallel programming class is to implement a train scheduling system using threads (we will be coding this in C&#43;&#43;). You can find more information about the project in my previous post.
+Up to this point, I&amp;rsquo;ve only dealt with sequential programming which means instructions are executed one at a time. It&amp;rsquo;s easy to visualize programs like that. Without running the program, you can easily trace through your code and know if something will be off."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/train-simulation-2/" />
+
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Train Simulation, Pt. 2"/>
+<meta name="twitter:description" content="The first project in my parallel programming class is to implement a train scheduling system using threads (we will be coding this in C&#43;&#43;). You can find more information about the project in my previous post.
+Up to this point, I&rsquo;ve only dealt with sequential programming which means instructions are executed one at a time. It&rsquo;s easy to visualize programs like that. Without running the program, you can easily trace through your code and know if something will be off."/>
+
+
+
+<meta property="og:title" content="Train Simulation, Pt. 2" />
+<meta property="og:description" content="The first project in my parallel programming class is to implement a train scheduling system using threads (we will be coding this in C&#43;&#43;). You can find more information about the project in my previous post.
+Up to this point, I&rsquo;ve only dealt with sequential programming which means instructions are executed one at a time. It&rsquo;s easy to visualize programs like that. Without running the program, you can easily trace through your code and know if something will be off." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/train-simulation-2/" />
+<meta property="article:published_time" content="2017-02-26T12:00:00+00:00" />
+<meta property="article:modified_time" content="2017-02-26T12:00:00+00:00" />
+
+
+
+<link rel="icon" type="image/png" href="/favicon.png">
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">brb, getting coffee...</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  <div class="post">
+    <h2 class="post-title"><a href="/posts/train-simulation-2/">Train Simulation, Pt. 2</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2017-02-26
+        </span>
+      
+      
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="/tags/cpp/">cpp</a>&nbsp;
+        
+          #<a href="/tags/multithreading/">multithreading</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      <p>The first project in my parallel programming class is to implement a train scheduling system using threads (we will be coding this in C++). You can find more information about the project in my previous post.</p>
+
+<p>Up to this point, I&rsquo;ve only dealt with sequential programming which means instructions are executed one at a time. It&rsquo;s easy to visualize programs like that. Without running the program, you can easily trace through your code and know if something will be off.</p>
+
+<p>Parallel programs are at a whole &lsquo;nother level. Program instructions - we call these &ldquo;threads&rdquo; - run independently at different times. Their execution depends on the operating system scheduler. It&rsquo;s hard to visualize what&rsquo;s going on because you have no way of knowing which thread will run at which time step. Threads can pretty much do whatever they dang well please. Debugging is a nightmare.</p>
+
+<p>For the first time in a long time, I had to sit down and really think about how I was going to accomplish this. Here&rsquo;s the high level implementation:</p>
+
+<pre><code>if all trains are ready
+  for all trains
+    while a train is not at its final destination
+      if the train track is not being used
+        advance to next station
+      else
+        stay and wait
+    endwhile
+  endfor
+endif
+</code></pre>
+
+<p>If you think about this sequentially, it&rsquo;s pretty simple right? All you need is an array of trains, an array of their schedules, and an array of train tracks in use. Then, at each iteration (time step), you&rsquo;d just check if the train track you need is in the trains tracks array. Easy.</p>
+
+<blockquote>
+<p>Tip: When designing a parallel program, first think about how you would implement it in a sequential program. That way, it&rsquo;s quick and easy to pick out the sections that can be implemented in parallel.</p>
+</blockquote>
+
+<p>From the pseudocode above, pay attention to the while loop. Why is that important? This section of code represents a single train operation and if we look further, it doesn&rsquo;t care about what other trains are doing at any given time. It only cares about which tracks are free to use. Here&rsquo;s where parallel programming comes in. 🙌 Since there are no real dependencies between the trains, we can divide them into their own tasks. Specifically, we&rsquo;ll assign each train to its own thread.</p>
+
+<pre><code class="language-cpp">std::thread** trainThreads = new std::thread*[numTrains];
+for (int i = 0; i &lt; numTrains; i++) {
+  trainThreads[i] = new std::thread(runTrain, trains[i], numTrains);
+}
+</code></pre>
+
+<p>What is happening here?</p>
+
+<p>For this, we declare an array of threads called <code>trainThreads</code> that will hold our arbitrary number of trains. Then, to create and initialize our threads, all we need to do is call the <code>std::thread</code> constructor:</p>
+
+<pre><code class="language-cpp">std::thread(runTrain, trains[i], numTrains);
+</code></pre>
+
+<p>The first parameter in the constructor is the work assignment that we want to assign to the thread. In our case, that is the method <code>runTrain</code>. Any parameters after the first are passed as parameters to the first parameter. So, <code>trains[i]</code> and <code>numTrains</code> are parameters that belong to the function <code>runTrain</code> which will be responsible for handling the following code section we determined from above:</p>
+
+<pre><code>while a train is not at its final destination
+  if the train track is not being used
+    advance to next station
+  else
+    stay and wait
+endwhile
+</code></pre>
+
+<p>In the meantime, our main function will just be waiting until the threads are done working. The builtin function for that is <code>join()</code>. So, before the main function returns, we&rsquo;d call:</p>
+
+<pre><code class="language-cpp">for (int i = 0; i &lt; numTrains; i++) {
+  // Join the thread with the main thread
+  trainThreads[i]-&gt;join();
+}
+</code></pre>
+
+<p>One last thing to mention before diving into the nitty gritty of the <code>runTrain</code> code. Remember how I said threads can do whatever they please?</p>
+
+<p>Try running the code below.</p>
+
+<pre><code class="language-cpp">#include &lt;thread&gt;
+#include &lt;iostream&gt;
+
+void work(int assignment) {
+  std::cout &lt;&lt; &quot;I am thread #&quot; &lt;&lt; assignment &lt;&lt; &quot;\n&quot;;
+}
+
+int main(int argc, char* argv[]) {
+	std::thread** t = new std::thread*[nThreads];
+	for (int i = 0; i &lt; 10; i++)
+		t[i] = new std::thread(work, i);
+
+	std::cout &lt;&lt; &quot;Hello from the parent thread.\n&quot;;
+	for (int i = 0; i &lt; 10; i++)
+		t[i]-&gt;join();
+
+	return 0;
+}
+</code></pre>
+
+<p>You can see that the results are spit out in no particular order. It&rsquo;s all garbled! It is the programmer&rsquo;s job to make sure these threads are behaving themselves and share their resources or wait until the other thread is done.</p>
+
+<p>There are these semaphores called a mutex (or mutices) that we need to use as barriers for our threads. It&rsquo;s a way for us to synchronize how they share a resource. In the example above, we need to wrap a mutex around the <code>std::cout</code> resource to block other threads from snatching it while it is in use. We can simply modified our code to be:</p>
+
+<pre><code class="language-cpp">std::mutex coutMutex;
+void work(int assignment) {
+	coutMutex.lock();
+	std::cout &lt;&lt; &quot;I am thread #&quot; &lt;&lt; assignment &lt;&lt; &quot;\n&quot;;
+	coutMutex.unlock();
+}
+</code></pre>
+
+<p>Mutices are a big part of parallel programming. Erm, at least, for this project it is important. 😅 If you haven&rsquo;t already guessed it, our train tracks in this project will each be its own mutex. So, I had another array declared to represent all possible track mutex instances:</p>
+
+<pre><code class="language-cpp">// A given track will be identifed as i–j:
+// the track between station i and station j.
+// Note that i–j and j–i denote the same track.
+std::mutex** trackMtxs = new std::mutex*[numStations];
+for (int i = 0; i &lt; numStations; i++) {
+  for (int j = i; j &lt; numStations; j++) {
+    trackMtxs[i] = new std::mutex();
+  }
+}
+</code></pre>
+
+<p>Now, we can expand on our <code>runTrain</code> function. The pseudocode will looks like this:</p>
+
+<pre><code>while a train is not at its final destination
+  if the track mutex is not locked, lock it
+    advance to next station
+    unlock the track mutex
+  else
+    stay and wait
+endwhile
+</code></pre>
+
+<p>Another thing we need to make sure is that all the trains are running at the same time. To do that, we need some kind of barrier to synchronize our trains at each time step. For this, we have our <code>Barrier</code> class. This class has a condition variable and a counter. At each iteration (i.e. time step), the condition variable to block the program from moving on to the next iteration until the counter reaches a certain expected value. Here, our expected value would be the number of trains. When each thread hits the barrier, it will increase the counter variable. Once it reaches the expected value, the barrier will give all the running threads the green light to continue to the next iteration.</p>
+
+<p>Finally, here is my <code>runTrain</code> implementation!</p>
+
+<pre><code class="language-cpp">void runTrain(Train* train, int numTrains) {
+  // wait until all trains threads are initialized
+  while (!ready) {};
+
+  // the timestep for each train should be synchronized
+  int timeStep = 0;
+
+  while (numTrainsDone != numTrains) {
+    int currentStop = train-&gt;getCurrentStop();
+    int nextStop = train-&gt;getNextStop();
+
+    if (!train-&gt;isAtEnd()) {
+      // try to lock the track and advance if unoccupied
+      if (lockTrack(currentStop, nextStop)) {
+        train-&gt;move(timeStep);
+      } else {
+        train-&gt;stay(timeStep);
+      }
+    }
+
+    // hit barrier to wait for the rest of the threads
+    theBarrier.barrier(numTrains);
+
+    // unlock the track mutex once the barrier gives the go
+    unlockTrack(currentStop, nextStop);
+
+    // increment to next time step
+    timeStep++;
+  }
+}
+</code></pre>
+
+<p>So, that is all there is to it for this train simulation. Pretty simple starter project for a beginner. Hopefully, I can come back in the future to improve my code and um, make it work properly. 😅</p>
+
+<p><a href="https://github.com/sharynneazhar/coursework/tree/master/eecs690/project1">Source Code</a></p>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="/posts/top-setup-4/">
+                <span class="button__icon">←</span>
+                <span class="button__text">TopSetup: Checking In</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="/posts/train-simulation/">
+                <span class="button__text">Multicore Programming - Train Simulation</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">brb, getting coffee...</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span>
+        <span>Theme created by <a href="https://twitter.com/panr" target="_blank" rel="noopener">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+  </body>
+</html>

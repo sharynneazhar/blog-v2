@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>Multicore Programming - Train Simulation :: Sharynne Azhar</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="This semester, I’m taking a class on parallel programming - EECS 690: Multicore and GPGPU Programming.
+It&amp;rsquo;s a funny story actually. I meant to take the Computer Graphics (EECS 672) class, but it was only offered in the fall. Then, I saw this 690 class that is taught by the same professor. I had no idea what multicore meant but I know GPU. It had to have something to do with graphics, right?"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/train-simulation/" />
+
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Multicore Programming - Train Simulation"/>
+<meta name="twitter:description" content="This semester, I’m taking a class on parallel programming - EECS 690: Multicore and GPGPU Programming.
+It&rsquo;s a funny story actually. I meant to take the Computer Graphics (EECS 672) class, but it was only offered in the fall. Then, I saw this 690 class that is taught by the same professor. I had no idea what multicore meant but I know GPU. It had to have something to do with graphics, right?"/>
+
+
+
+<meta property="og:title" content="Multicore Programming - Train Simulation" />
+<meta property="og:description" content="This semester, I’m taking a class on parallel programming - EECS 690: Multicore and GPGPU Programming.
+It&rsquo;s a funny story actually. I meant to take the Computer Graphics (EECS 672) class, but it was only offered in the fall. Then, I saw this 690 class that is taught by the same professor. I had no idea what multicore meant but I know GPU. It had to have something to do with graphics, right?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/train-simulation/" />
+<meta property="article:published_time" content="2017-02-23T12:00:00+00:00" />
+<meta property="article:modified_time" content="2017-02-23T12:00:00+00:00" />
+
+
+
+<link rel="icon" type="image/png" href="/favicon.png">
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">brb, getting coffee...</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  <div class="post">
+    <h2 class="post-title"><a href="/posts/train-simulation/">Multicore Programming - Train Simulation</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2017-02-23
+        </span>
+      
+      
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="/tags/cpp/">cpp</a>&nbsp;
+        
+          #<a href="/tags/multithreading/">multithreading</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      <p>This semester, I’m taking a class on parallel programming - EECS 690: Multicore and GPGPU Programming.</p>
+
+<p>It&rsquo;s a funny story actually. I meant to take the Computer Graphics (EECS 672) class, but it was only offered in the fall. Then, I saw this 690 class that is taught by the same professor. I had no idea what multicore meant but I know GPU. It had to have something to do with graphics, right?</p>
+
+<p>Nope. I’m a nub. 😅</p>
+
+<p>The motivation behind this class is <a href="http://www.investopedia.com/terms/m/mooreslaw.asp">Moore’s Law</a>. It&rsquo;s more (pun intended) of an observation, really. It states that the operational processing speed of computers (though, we later discovered that it is actually the transistor count) doubles approximately every 18-24 months. This means we can get smaller and more powerful technology about every two years! For those of you who&rsquo;ve seen <a href="http://www.imdb.com/title/tt4846340/">Hidden Figures</a>, just look how far we&rsquo;ve come from the IBM 7090. That single computer took up an entire room! Today, our teeny smartwatches have a heck more computing power that machine.</p>
+
+<p>However, we are at a point where the trend is starting to break. It&rsquo;s becoming really difficult to find ways to dissipate all the energy that comes from packing so much power in a small space. Remember the whole Samsung Note 7 mess? 💥💥</p>
+
+<p>As a result, the attention has shifted to different parallelization techniques. Two common approaches are: multicore parallelization (either in a single machine or in a networked collection of machines) or using GPUs for general-purpose parallel computing.</p>
+
+<p>To start, we are learning multithreaded programming on a single machine. The first project is to simulate a train scheduling system. Here are the requirements:</p>
+
+<p>Suppose you are responsible for the design of a train scheduling system with the following operational specifications:</p>
+
+<ol>
+<li>There are <em>n</em> trains identified by letters: <em>A</em>, <em>B</em>, &hellip; (Assume <em>n</em> ≤ 26)</li>
+<li>There are <em>m</em> stations identified by sequential numbers: 0, 1, 2, &hellip;, <em>m-1</em></li>
+<li>There is at most a single track between any pair of stations, hence only one train at a time may be traveling in either direction along the track between a given pair of stations</li>
+<li>All stations have the capacity to hold <em>n</em> trains</li>
+<li>A given track will be identifed as <em>i–j</em>: the track between station <em>i</em> and station <em>j</em>. Note that <em>i-j</em> and <em>j–i</em> denote the same track</li>
+<li>At the start of a day, each train will be given an assigned route in the form of the list of stations to which it is to travel. For example: 3, 5, 1, 7, 6, 4. You are to assume:
+
+<ul>
+<li>Each train is initially at the first station in this list.</li></li>
+<li>Whenever the list has: &hellip;, <em>i</em>, <em>j</em>, &hellip;, assume that *i*≠<em>j</em>, there is a direct track between <em>i</em> and <em>j</em>, it takes one unit of time to go from <em>i</em> to <em>j</em> along this track, and the train must use that track to go from <i>i</i> to <em>j</em></li>
+<li>At the end of the day, the train will stay at the last station in the list.</li>
+</ul></li>
+</ol>
+
+<p>Consider a simulation in which we determine at each time step which trains that are not yet at their final destination are cleared to go to the next station in their list (or whether they must stay where they are for that time step).</p>
+
+<p>Want to see how I implemented it? Check out Part 2]!</p>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="/posts/train-simulation-2/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Train Simulation, Pt. 2</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="/posts/top-setup-3/">
+                <span class="button__text">TopSetup: Getting on Board with Rails</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">brb, getting coffee...</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span>
+        <span>Theme created by <a href="https://twitter.com/panr" target="_blank" rel="noopener">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+  </body>
+</html>

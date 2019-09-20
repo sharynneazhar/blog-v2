@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>google-api on Sharynne Azhar</title>
+    <link>/tags/google-api/</link>
+    <description>Recent content in google-api on Sharynne Azhar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Aug 2017 12:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/google-api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hacking the Google Places Autocomplete API</title>
+      <link>/posts/google-places-api/</link>
+      <pubDate>Tue, 01 Aug 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/google-places-api/</guid>
+      <description>For the past couple of weeks, I&amp;rsquo;ve been working on implementing a location search box using Google Places API. It would be used to apply a location filter on a list of user profiles. To do so, I needed to use the Autocomplete API which provides a nice type-ahead-search behavior you&amp;rsquo;ve seen in many of Google&amp;rsquo;s search boxes. Once I got my API key, it was a really simple setup. Note: I&amp;rsquo;m working with React.</description>
+    </item>
+    
+  </channel>
+</rss>

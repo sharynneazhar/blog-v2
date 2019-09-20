@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>React ND - Day #1 :: Sharynne Azhar</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Last week, I mentioned enrolling in Udacity’s React Nanodegree program. I’m already pretty familiar with React, but I feel like I have a lack of foundation when it comes to the building principles of React. So, I was pretty excited when I found out about Udacity’s new React Nanodegree. Here’s to unlearning bad habits! 🍻
+Day #1  Worked from 6:15 to 7:15pm Made it through Part 1: Lesson 1 &amp;amp; 2  Lesson 1 First thing I learned was function composition - the idea of combining simple functions to build more complicated ones."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/react-nd-day-1/" />
+
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="React ND - Day #1"/>
+<meta name="twitter:description" content="Last week, I mentioned enrolling in Udacity’s React Nanodegree program. I’m already pretty familiar with React, but I feel like I have a lack of foundation when it comes to the building principles of React. So, I was pretty excited when I found out about Udacity’s new React Nanodegree. Here’s to unlearning bad habits! 🍻
+Day #1  Worked from 6:15 to 7:15pm Made it through Part 1: Lesson 1 &amp; 2  Lesson 1 First thing I learned was function composition - the idea of combining simple functions to build more complicated ones."/>
+
+
+
+<meta property="og:title" content="React ND - Day #1" />
+<meta property="og:description" content="Last week, I mentioned enrolling in Udacity’s React Nanodegree program. I’m already pretty familiar with React, but I feel like I have a lack of foundation when it comes to the building principles of React. So, I was pretty excited when I found out about Udacity’s new React Nanodegree. Here’s to unlearning bad habits! 🍻
+Day #1  Worked from 6:15 to 7:15pm Made it through Part 1: Lesson 1 &amp; 2  Lesson 1 First thing I learned was function composition - the idea of combining simple functions to build more complicated ones." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/react-nd-day-1/" />
+<meta property="article:published_time" content="2017-08-02T12:00:00+00:00" />
+<meta property="article:modified_time" content="2017-08-02T12:00:00+00:00" />
+
+
+
+<link rel="icon" type="image/png" href="/favicon.png">
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">brb, getting coffee...</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  <div class="post">
+    <h2 class="post-title"><a href="/posts/react-nd-day-1/">React ND - Day #1</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2017-08-02
+        </span>
+      
+      
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="/tags/react/">react</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      
+
+<p><a href="https://github.com/sharynneazhar/blog/blob/master/_posts/2017-07-23-udacity-discovery-week.markdown">Last week</a>, I mentioned enrolling in Udacity’s React Nanodegree program. I’m already pretty familiar with React, but I feel like I have a lack of foundation when it comes to the building principles of React. So, I was pretty excited when I found out about Udacity’s new React Nanodegree. Here’s to unlearning bad habits! 🍻</p>
+
+<h2 id="day-1">Day #1</h2>
+
+<ul>
+<li>Worked from 6:15 to 7:15pm</li>
+<li>Made it through Part 1: Lesson 1 &amp; 2</li>
+</ul>
+
+<h3 id="lesson-1">Lesson 1</h3>
+
+<p>First thing I learned was <strong>function composition</strong> - the idea of combining simple functions to build more complicated ones. I had flashbacks to Calculus when I heard it. Never forget: <code>(f ∘ g)(x) = f(g(x))</code>. React is heavy on function composition. All of its UI components are essentially built from the nesting of smaller functions.</p>
+
+<p>A good function should follow the <strong>DOT</strong> rule: Do One Thing. It should contain logic for only one task. For example, a function <code>getProfileData()</code> should only return the profile data. If needed, any parsing logic should probably be factored out into another function, for example, <code>parseProfileData()</code>.</p>
+
+<p>Another concept I learned was the difference between <strong>imperative</strong> and <strong>declarative</strong> code. I remember going over this in school but this was a great refresher. Imperative code is where you explicitly tell a program <strong>how</strong> to do something to get what you want done. Declarative code is where you tell a program <strong>what</strong> you want done and it will take care of the rest.</p>
+
+<p>For example, changing the temperature in your room to 72 degrees with your brand new Google Home. In terms of imperative code, you would say “Ok Google, increase the temperature by one degree.” You would keep telling it that until you reach 72 degrees. With declarative code, you would instead say &ldquo;Ok Google, set the temperature to 72 degrees” and your Google Home would take care of the rest. I drew a little visual to help me remember the difference.</p>
+
+
+  <img src="/declarative-vs-imperative.jpg"  alt="Declarative vs. Imperative Code"  class="left"  />
+
+
+
+<h3 id="lesson-2">Lesson 2</h3>
+
+<p>This lesson was a short one about how UI is rendered with React. It introduced <code>create-react-app</code> and explained <code>React.Component</code> briefly.</p>
+
+<h3 id="takeaway">Takeaway</h3>
+
+<p>React <strong>favors composition over inheritance</strong>. This is different than what we are used to. Many programming languages and frontend frameworks make use of inheritance. React, on the other hand, uses composition as mentioned in lesson 1. Instead of extending a base component with inheritance, we compose a new components with nesting. React components should be independent, focused, and reusable.</p>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="/posts/react-nd-day-2/">
+                <span class="button__icon">←</span>
+                <span class="button__text">React ND - Day #2</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="/posts/google-places-api/">
+                <span class="button__text">Hacking the Google Places Autocomplete API</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">brb, getting coffee...</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span>
+        <span>Theme created by <a href="https://twitter.com/panr" target="_blank" rel="noopener">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+  </body>
+</html>

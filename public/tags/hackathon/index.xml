@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hackathon on Sharynne Azhar</title>
+    <link>/tags/hackathon/</link>
+    <description>Recent content in hackathon on Sharynne Azhar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Jun 2017 12:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/hackathon/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>React Riot 2017</title>
+      <link>/posts/react-riot-2017/</link>
+      <pubDate>Wed, 28 Jun 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/react-riot-2017/</guid>
+      <description>I had so much fun with the previous hackathon that I wanted to try another. I searched online and found React Riot. It&amp;rsquo;s a 48-hour online React hackathon held over this past weekend. It was the worst weekend I could&amp;rsquo;ve possibly chosen to participate in a hackathon. I had a work deadline to meet. I had a talent show to emcee. I had a summer camp to prepare. I had many things going on.</description>
+    </item>
+    
+    <item>
+      <title>My First Hackathon</title>
+      <link>/posts/cerner-intern-hackfest/</link>
+      <pubDate>Mon, 26 Jun 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/cerner-intern-hackfest/</guid>
+      <description>Two weeks ago, I had decided to join a hackathon sponsored by the company I&amp;rsquo;m interning at this summer, Cerner. It was a hackathon for interns and apprentices, and this will be the my first hackathon ever. It was a whole week long so it won&amp;rsquo;t interfere with our actual work. At least, that was the intention. 😝
+Our team chose to work on a healthcare analytics app. It was an idea pitched by one of my teammates and we all liked the idea, especially since Cerner deals with healthcare IT and we can receive bonus points for using any of their open-sourced libraries.</description>
+    </item>
+    
+  </channel>
+</rss>

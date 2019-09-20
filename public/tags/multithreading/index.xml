@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>multithreading on Sharynne Azhar</title>
+    <link>/tags/multithreading/</link>
+    <description>Recent content in multithreading on Sharynne Azhar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Feb 2017 12:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/multithreading/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Train Simulation, Pt. 2</title>
+      <link>/posts/train-simulation-2/</link>
+      <pubDate>Sun, 26 Feb 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/train-simulation-2/</guid>
+      <description>The first project in my parallel programming class is to implement a train scheduling system using threads (we will be coding this in C++). You can find more information about the project in my previous post.
+Up to this point, I&amp;rsquo;ve only dealt with sequential programming which means instructions are executed one at a time. It&amp;rsquo;s easy to visualize programs like that. Without running the program, you can easily trace through your code and know if something will be off.</description>
+    </item>
+    
+    <item>
+      <title>Multicore Programming - Train Simulation</title>
+      <link>/posts/train-simulation/</link>
+      <pubDate>Thu, 23 Feb 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/train-simulation/</guid>
+      <description>This semester, I’m taking a class on parallel programming - EECS 690: Multicore and GPGPU Programming.
+It&amp;rsquo;s a funny story actually. I meant to take the Computer Graphics (EECS 672) class, but it was only offered in the fall. Then, I saw this 690 class that is taught by the same professor. I had no idea what multicore meant but I know GPU. It had to have something to do with graphics, right?</description>
+    </item>
+    
+  </channel>
+</rss>

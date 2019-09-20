@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>udacity on Sharynne Azhar</title>
+    <link>/tags/udacity/</link>
+    <description>Recent content in udacity on Sharynne Azhar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Jul 2017 12:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/udacity/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>It&#39;s Discovery Week at Udacity!</title>
+      <link>/posts/udacity-discovery-week/</link>
+      <pubDate>Sun, 23 Jul 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/udacity-discovery-week/</guid>
+      <description>A little over a year ago, I was a relatively new developer. I was really enthusiastic and passionate about improving my coding skills, especially in the areas of web and mobile development. Even though I was in school for Computer Science, the curriculum doesn&amp;rsquo;t exactly teach you how to develop real life applications. All we learn about are data structures and algorithms. LOTS OF THEM.
+I was 100% sure that I will not go to graduate school (at least, not in the next few years), and as much as I enjoyed learning about data structures, I didn&amp;rsquo;t feel like I was well-prepared for a job.</description>
+    </item>
+    
+  </channel>
+</rss>

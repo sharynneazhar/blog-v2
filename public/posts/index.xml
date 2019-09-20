@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Sharynne Azhar</title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on Sharynne Azhar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Nov 2017 12:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>React ND - Redux, Pt. 4</title>
+      <link>/posts/react-nd-day-8/</link>
+      <pubDate>Mon, 27 Nov 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/react-nd-day-8/</guid>
+      <description>Day #8  Worked from 1:30pm - 2:30pm Made it through Lesson 5  Lesson 5: Redux Middleware When I was learning React-Redux, one concept that I could never wrap my head around was the concept of a middleware. What is a middleware?
+Middleware is code that intercepts a request or a process, usually redirecting it or producing some sort of side effect. In Redux, middleware lives in between the dispatching of action and the reducers.</description>
+    </item>
+    
+    <item>
+      <title>React ND - Redux, Pt. 3</title>
+      <link>/posts/react-nd-day-7/</link>
+      <pubDate>Thu, 23 Nov 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/react-nd-day-7/</guid>
+      <description>Day #7  Worked from 11pm - 1am Made it through Lesson 4  Lesson 3: React &amp;amp; Redux The creators of Redux wrote a really helpful package react-redux that provides us with a better abstraction for Redux. With the connect() method from react-redux, we won&amp;rsquo;t have to keep passing the store down a bunch of nested components (this is called prop threading); instead, connect() allows use to specify which components should receive which data from the store.</description>
+    </item>
+    
+    <item>
+      <title>React ND - Redux, Pt. 2</title>
+      <link>/posts/react-nd-day-6/</link>
+      <pubDate>Tue, 21 Nov 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/react-nd-day-6/</guid>
+      <description>Day #6  Worked from 10:15am - 1:10pm Made it through Lesson 2  Lesson 2: Redux At Its Core The concept of Redux, as we learned last time, was pretty simple to understand. However, learning how to implement Redux may be a little bit trickier. There are three major players in Redux:
+ Actions Reducers The Store  Learning Redux is difficult because in order to be able to implement anything, you really need to understand how these three components work together.</description>
+    </item>
+    
+    <item>
+      <title>React ND - Redux, Pt. 1</title>
+      <link>/posts/react-nd-day-5/</link>
+      <pubDate>Mon, 20 Nov 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/react-nd-day-5/</guid>
+      <description>Day #5?  Worked from 8:30pm - 9:50pm Made it through Lesson 1  It&amp;rsquo;s been awhile, fam. Since school started, I haven&amp;rsquo;t had very much time to work on these lessons. Though, it&amp;rsquo;s Thanksgiving break this week and I plan on grinding. Hopefully, I can finish the two projects left in this Nanodegree by this weekend!
+Let&amp;rsquo;s get cracking.
+Lesson 1: Why Redux? Motivation for Redux If you think about bugs you&amp;rsquo;ve had come across while developing an app, the cause of those bugs probably came from some state or data mismanagement.</description>
+    </item>
+    
+    <item>
+      <title>React ND - MyReads</title>
+      <link>/posts/react-nd-myreads/</link>
+      <pubDate>Sat, 12 Aug 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/react-nd-myreads/</guid>
+      <description>Day #4  Worked from 1:15am - 4am Completed Project #1  MyReads - Book Tracking App Quick recap before I get to the project: I finished up lesson 5 on React Router yesterday night. I learned about single-page applications (I always hear this term get thrown around but never actually understood the concept until now) and how React Router comes into play in terms of dynamically rendering content.</description>
+    </item>
+    
+    <item>
+      <title>React ND - Day #3</title>
+      <link>/posts/react-nd-day-3/</link>
+      <pubDate>Sat, 05 Aug 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/react-nd-day-3/</guid>
+      <description>Day #3  Worked from 3:43am - 4am Made it through Lesson 4  Lesson 4: Rendering UI with External Data Nothing special in this lesson. It took about 40 minutes to complete. It introduced React&amp;rsquo;s Lifecycle Events.
+Lifecycle Events These are special methods each React component has that allows us to tap into different points in its life to manipulate state. We can breakdown these methods into three different points: 1.</description>
+    </item>
+    
+    <item>
+      <title>React ND - Day #2</title>
+      <link>/posts/react-nd-day-2/</link>
+      <pubDate>Fri, 04 Aug 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/react-nd-day-2/</guid>
+      <description>Day #2  Worked from 10:45pm to 12:15am Made it through Part 1: Lesson 3  Lesson 3: State Management In this lesson, I learned more about state management in React. There are three main parts of state management:
+ With props With function components With controlled components  Section 3.1: Passing Data with Props Remember that React is a Javascript library and it is nothing but a series of composed functions.</description>
+    </item>
+    
+    <item>
+      <title>React ND - Day #1</title>
+      <link>/posts/react-nd-day-1/</link>
+      <pubDate>Wed, 02 Aug 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/react-nd-day-1/</guid>
+      <description>Last week, I mentioned enrolling in Udacity’s React Nanodegree program. I’m already pretty familiar with React, but I feel like I have a lack of foundation when it comes to the building principles of React. So, I was pretty excited when I found out about Udacity’s new React Nanodegree. Here’s to unlearning bad habits! 🍻
+Day #1  Worked from 6:15 to 7:15pm Made it through Part 1: Lesson 1 &amp;amp; 2  Lesson 1 First thing I learned was function composition - the idea of combining simple functions to build more complicated ones.</description>
+    </item>
+    
+    <item>
+      <title>Hacking the Google Places Autocomplete API</title>
+      <link>/posts/google-places-api/</link>
+      <pubDate>Tue, 01 Aug 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/google-places-api/</guid>
+      <description>For the past couple of weeks, I&amp;rsquo;ve been working on implementing a location search box using Google Places API. It would be used to apply a location filter on a list of user profiles. To do so, I needed to use the Autocomplete API which provides a nice type-ahead-search behavior you&amp;rsquo;ve seen in many of Google&amp;rsquo;s search boxes. Once I got my API key, it was a really simple setup. Note: I&amp;rsquo;m working with React.</description>
+    </item>
+    
+    <item>
+      <title>Cerner Internship 2017: Wrap-Up</title>
+      <link>/posts/cerner-internship/</link>
+      <pubDate>Wed, 26 Jul 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/cerner-internship/</guid>
+      <description>Oh my goodness. It is officially my last week as a Cerner intern. *sad face*
+When I began the internship, I had a pretty good idea of what to expect, especially since half of my friends work for Cerner. The internship is going to start off slow with orientation and a few tours. Then, I&amp;rsquo;ll be thrown right into a project and I&amp;rsquo;ll learn how to be big girl developer. Pretty chill.</description>
+    </item>
+    
+    <item>
+      <title>It&#39;s Discovery Week at Udacity!</title>
+      <link>/posts/udacity-discovery-week/</link>
+      <pubDate>Sun, 23 Jul 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/udacity-discovery-week/</guid>
+      <description>A little over a year ago, I was a relatively new developer. I was really enthusiastic and passionate about improving my coding skills, especially in the areas of web and mobile development. Even though I was in school for Computer Science, the curriculum doesn&amp;rsquo;t exactly teach you how to develop real life applications. All we learn about are data structures and algorithms. LOTS OF THEM.
+I was 100% sure that I will not go to graduate school (at least, not in the next few years), and as much as I enjoyed learning about data structures, I didn&amp;rsquo;t feel like I was well-prepared for a job.</description>
+    </item>
+    
+    <item>
+      <title>One Liners - Using Array.prototype.some</title>
+      <link>/posts/one-liners/</link>
+      <pubDate>Wed, 19 Jul 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/one-liners/</guid>
+      <description>We all can agree that JavaScript can be a huge pain sometimes (ok, maybe all the time). It&amp;rsquo;s constantly changing and there are a lot of nuances with its methods. A couple years ago, I was introduced to ES6 and all of its awesome new features, particularly its new iterative methods like some(), filter(), indexOf() and a few others. Learning these methods made my JavaScript life a little bit sweeter.</description>
+    </item>
+    
+    <item>
+      <title>React Riot 2017</title>
+      <link>/posts/react-riot-2017/</link>
+      <pubDate>Wed, 28 Jun 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/react-riot-2017/</guid>
+      <description>I had so much fun with the previous hackathon that I wanted to try another. I searched online and found React Riot. It&amp;rsquo;s a 48-hour online React hackathon held over this past weekend. It was the worst weekend I could&amp;rsquo;ve possibly chosen to participate in a hackathon. I had a work deadline to meet. I had a talent show to emcee. I had a summer camp to prepare. I had many things going on.</description>
+    </item>
+    
+    <item>
+      <title>My First Hackathon</title>
+      <link>/posts/cerner-intern-hackfest/</link>
+      <pubDate>Mon, 26 Jun 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/cerner-intern-hackfest/</guid>
+      <description>Two weeks ago, I had decided to join a hackathon sponsored by the company I&amp;rsquo;m interning at this summer, Cerner. It was a hackathon for interns and apprentices, and this will be the my first hackathon ever. It was a whole week long so it won&amp;rsquo;t interfere with our actual work. At least, that was the intention. 😝
+Our team chose to work on a healthcare analytics app. It was an idea pitched by one of my teammates and we all liked the idea, especially since Cerner deals with healthcare IT and we can receive bonus points for using any of their open-sourced libraries.</description>
+    </item>
+    
+    <item>
+      <title>Pretty JSON</title>
+      <link>/posts/pretty-json/</link>
+      <pubDate>Wed, 26 Apr 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/pretty-json/</guid>
+      <description>I first learned about the JSON.stringify() method from a senior developer during an internship. Since then, I&amp;rsquo;ve used it A LOT to debug JS code, but one thing that always annoyed me was how it prints the whole JSON object in one long line.
+I spent a good 30 minutes or so looking at different Stack Overflow solutions. Through combinations of googling bad keywords and lazy skimming, I found a good great solution.</description>
+    </item>
+    
+    <item>
+      <title>CSS Tricks: Responsive Tables</title>
+      <link>/posts/css-responsive-tables/</link>
+      <pubDate>Wed, 19 Apr 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/css-responsive-tables/</guid>
+      <description>For a current project I&amp;rsquo;m working on, I had the task to create a generic table view. There were a few caveats. The website will be used in schools so that means a lot of Internet Explorer users&amp;hellip; possibly old versions of IE as well.
+Well, that stinks.
+My first instinct is to use Bootstrap&amp;rsquo;s table component. Bootstrap already has responsive class all set up and ready to go, so why not?</description>
+    </item>
+    
+    <item>
+      <title>Command Line Sass</title>
+      <link>/posts/command-line-sass/</link>
+      <pubDate>Thu, 23 Mar 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/command-line-sass/</guid>
+      <description>Turns out there is a way to use SASS without an application like Rails or Compass. It is fairly easy to get it up and running, especially if you are developing on a Mac because Ruby already comes pre-installed! ️️Otherwise, you&amp;rsquo;ll need to install Ruby on your computer.
+After Ruby is installed, you need to install SASS. Just run the following:
+gem install sass  Note: if you run into errors, you might need to use the sudo command.</description>
+    </item>
+    
+    <item>
+      <title>TopSetup: Checking In</title>
+      <link>/posts/top-setup-4/</link>
+      <pubDate>Wed, 01 Mar 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/top-setup-4/</guid>
+      <description>Ooo wee. It&amp;rsquo;s been almost a month since Top Setup was created! I&amp;rsquo;ve done quite a bit of development since then. It&amp;rsquo;s starting to look pretty sharp.
+Have a look at some of these fancy pictures 😬
+I&amp;rsquo;ve learned a bit more about Rails too. The rails g scaffold feature was really helpful in getting the website up and running quickly. However, I&amp;rsquo;m beginning to have reservations about using scaffolds. My reason is that it does way too much for you.</description>
+    </item>
+    
+    <item>
+      <title>Train Simulation, Pt. 2</title>
+      <link>/posts/train-simulation-2/</link>
+      <pubDate>Sun, 26 Feb 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/train-simulation-2/</guid>
+      <description>The first project in my parallel programming class is to implement a train scheduling system using threads (we will be coding this in C++). You can find more information about the project in my previous post.
+Up to this point, I&amp;rsquo;ve only dealt with sequential programming which means instructions are executed one at a time. It&amp;rsquo;s easy to visualize programs like that. Without running the program, you can easily trace through your code and know if something will be off.</description>
+    </item>
+    
+    <item>
+      <title>Multicore Programming - Train Simulation</title>
+      <link>/posts/train-simulation/</link>
+      <pubDate>Thu, 23 Feb 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/train-simulation/</guid>
+      <description>This semester, I’m taking a class on parallel programming - EECS 690: Multicore and GPGPU Programming.
+It&amp;rsquo;s a funny story actually. I meant to take the Computer Graphics (EECS 672) class, but it was only offered in the fall. Then, I saw this 690 class that is taught by the same professor. I had no idea what multicore meant but I know GPU. It had to have something to do with graphics, right?</description>
+    </item>
+    
+    <item>
+      <title>TopSetup: Getting on Board with Rails</title>
+      <link>/posts/top-setup-3/</link>
+      <pubDate>Fri, 17 Feb 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/top-setup-3/</guid>
+      <description>I am finally done with the design phase of TopSetup™! Time to start coding! 🤗
+I just started learning Ruby on Rails about a month ago to prepare for my new internship at Brand New Box. I’ve used AngularJS which is another MVC framework, but it was JavaScript based. Easy stuff. Rails, on the other hand, is completely new territory since it is Ruby based.
+I can’t believe I waited this long to learn it.</description>
+    </item>
+    
+    <item>
+      <title>TopSetup: UI/UX Designing</title>
+      <link>/posts/top-setup-2/</link>
+      <pubDate>Thu, 09 Feb 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/top-setup-2/</guid>
+      <description>As a developer, the only thing I’ve ever considered when it comes to user experience is performance. Is my app laggy? Is my website slow? My worries usually end there.
+But, UX design is so much more than that. There are certain rules of thumb I never thought I’d have to think about. For example, did you know labels should be placed ABOVE a form field? You don’t want your users to move their eyes too much.</description>
+    </item>
+    
+    <item>
+      <title>TopSetup: From Dirt to Diamonds</title>
+      <link>/posts/top-setup/</link>
+      <pubDate>Tue, 07 Feb 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/top-setup/</guid>
+      <description>Hey peeps. This is the start of my coding related blog! I’ve been wanting to start this but never really found a good opportunity.
+Until now! 🤗
+As part of my internship training, I was tasked to come up with a project idea and build it from scratch! Front-end to back-end. Ruby on Rails. I had a few different ideas but this one is the most relevant to my current hobbies.</description>
+    </item>
+    
+  </channel>
+</rss>

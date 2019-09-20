@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ruby-on-rails on Sharynne Azhar</title>
+    <link>/tags/ruby-on-rails/</link>
+    <description>Recent content in ruby-on-rails on Sharynne Azhar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Mar 2017 12:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/ruby-on-rails/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>TopSetup: Checking In</title>
+      <link>/posts/top-setup-4/</link>
+      <pubDate>Wed, 01 Mar 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/top-setup-4/</guid>
+      <description>Ooo wee. It&amp;rsquo;s been almost a month since Top Setup was created! I&amp;rsquo;ve done quite a bit of development since then. It&amp;rsquo;s starting to look pretty sharp.
+Have a look at some of these fancy pictures 😬
+I&amp;rsquo;ve learned a bit more about Rails too. The rails g scaffold feature was really helpful in getting the website up and running quickly. However, I&amp;rsquo;m beginning to have reservations about using scaffolds. My reason is that it does way too much for you.</description>
+    </item>
+    
+    <item>
+      <title>TopSetup: Getting on Board with Rails</title>
+      <link>/posts/top-setup-3/</link>
+      <pubDate>Fri, 17 Feb 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/top-setup-3/</guid>
+      <description>I am finally done with the design phase of TopSetup™! Time to start coding! 🤗
+I just started learning Ruby on Rails about a month ago to prepare for my new internship at Brand New Box. I’ve used AngularJS which is another MVC framework, but it was JavaScript based. Easy stuff. Rails, on the other hand, is completely new territory since it is Ruby based.
+I can’t believe I waited this long to learn it.</description>
+    </item>
+    
+    <item>
+      <title>TopSetup: UI/UX Designing</title>
+      <link>/posts/top-setup-2/</link>
+      <pubDate>Thu, 09 Feb 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/top-setup-2/</guid>
+      <description>As a developer, the only thing I’ve ever considered when it comes to user experience is performance. Is my app laggy? Is my website slow? My worries usually end there.
+But, UX design is so much more than that. There are certain rules of thumb I never thought I’d have to think about. For example, did you know labels should be placed ABOVE a form field? You don’t want your users to move their eyes too much.</description>
+    </item>
+    
+    <item>
+      <title>TopSetup: From Dirt to Diamonds</title>
+      <link>/posts/top-setup/</link>
+      <pubDate>Tue, 07 Feb 2017 12:00:00 +0000</pubDate>
+      
+      <guid>/posts/top-setup/</guid>
+      <description>Hey peeps. This is the start of my coding related blog! I’ve been wanting to start this but never really found a good opportunity.
+Until now! 🤗
+As part of my internship training, I was tasked to come up with a project idea and build it from scratch! Front-end to back-end. Ruby on Rails. I had a few different ideas but this one is the most relevant to my current hobbies.</description>
+    </item>
+    
+  </channel>
+</rss>
